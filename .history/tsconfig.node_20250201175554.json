@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "outDir": "src",
+    "rootDir": "electron",
+    "skipLibCheck": true,
+    "allowJs": true,
+    "strict": false,
+    "isolatedModules": false,
+    "types": ["node", "electron"]
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs"
+    }
+  },
+  "include": ["electron/**/*.ts"]
+} 

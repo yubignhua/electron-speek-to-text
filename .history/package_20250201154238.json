@@ -1,0 +1,25 @@
+{
+  "name": "electron-app",
+  "version": "1.0.0",
+  "description": "基础 Electron 应用",
+  "main": "dist/main.js",
+  "scripts": {
+    "start": "tsc && electron .",
+    "build": "tsc && electron-builder",
+    "build:mac": "tsc && electron-builder --mac"
+  },
+  "build": {
+    "appId": "com.example.electron-app",
+    "productName": "Electron应用",
+    "mac": {
+      "category": "public.app-category.utilities",
+      "target": ["dmg", "zip"]
+    },
+    "files": [
+      "dist/**/*",
+      "index.html",
+      "styles.css",
+      "renderer.js"
+    ]
+  }
+} 

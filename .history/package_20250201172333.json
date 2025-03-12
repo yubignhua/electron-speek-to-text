@@ -1,0 +1,46 @@
+{
+  "name": "electron-speech",
+  "version": "1.0.0",
+  "description": "语音转文字应用",
+  "main": "dist/main.js",
+  "scripts": {
+    "dev": "concurrently \"vite\" \"tsc -w\" \"wait-on http://localhost:5173 && electron .\"",
+    "build": "vue-tsc && vite build && tsc -p tsconfig.node.json",
+    "preview": "vite preview",
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "@types/electron": "^1.6.12",
+    "@types/node": "^18.19.74",
+    "concurrently": "^9.1.2",
+    "electron": "^25.9.8",
+    "electron-builder": "^24.13.3",
+    "typescript": "^5.7.3",
+    "vue-tsc": "^2.2.0"
+  },
+  "build": {
+    "appId": "com.example.electron-app",
+    "productName": "Electron应用",
+    "mac": {
+      "category": "public.app-category.utilities",
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    },
+    "files": [
+      "dist/**/*",
+      "index.html",
+      "styles.css",
+      "renderer.js"
+    ]
+  },
+  "dependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "axios": "^1.7.9",
+    "dotenv": "^16.4.7",
+    "groq-sdk": "^0.13.0",
+    "node-record-lpcm16": "^1.0.1",
+    "vue": "^3.5.13"
+  }
+}
